@@ -1,0 +1,153 @@
+
+/*
+===== GENERAL =====
+ */
+
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background:
+  linear-gradient(
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.4)
+  ),
+  url(https://capturinglittlemoments.files.wordpress.com/2015/05/rainyday-2-1.jpg) no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #555;
+}
+
+hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.sm-vert-divider {
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 1px;
+  height: 100%;
+  border-left: 1px solid #dce4ec;
+}
+
+.lg-vert-divider {
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 1px;
+  height: 100%;
+  border-left: 1px solid #dce4ec;
+}
+
+/*
+===== SEARCH AREA =====
+ */
+
+.search-area {
+  position: relative;
+  margin: 60px 0;
+}
+.search-area h1 {
+  font-size: 7.5vw;
+  color: #222;
+  text-shadow: 1px 1px 1px #fff;
+}
+
+/*
+===== WEATHER WEEK =====
+ */
+
+.weather-week {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.weather-week .weather-day-container {
+  margin-bottom: 30px;
+}
+
+/*
+===== WEATHER DAY =====
+ */
+
+.weather-day {
+  height: 440px;
+  overflow: hidden;
+  border: 2px solid #dce4ec;
+  padding: 20px;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 2px 2px 2px #fff;;
+}
+
+.weather-day h2 {
+  margin-top: 0px;
+  font-size: 20px;
+  /*color: #2c3e50;*/
+}
+
+.weather-image {
+  width: 100px;
+  height: 80px;
+  margin-bottom: 5px;
+}
+.weather-image i {
+  font-size: 80px;
+  color: #555;
+}
+
+.weather-description {
+  font-size: 16px;
+  color: #777;
+  text-transform: capitalize;
+}
+
+.weather-temps {}
+
+.weather-temps .temp {
+  display: inline-block;
+}
+
+.weather-temps .main-temp {
+  font-size: 56px;
+  font-weight: 600;
+  margin-right: 15px;
+}
+
+.weather-temps .secondary-temp {
+  font-size: 18px;
+}
+
+.weather-metas {
+  position: relative;
+  padding: 10px 0;
+  margin-bottom: 0;
+}
+
+.weather-meta {
+  font-size: 12px;
+  position: relative;
+}
+
+.weather-meta .tooltip {
+  position: absolute;
+  top: -100px;
+}
+
+.weather-meta .wi {
+  margin-right: 4px;
+}
+
+.weather-time-slider {
+  padding: 20px 0;
+}
+
+.weather-time-slider input {
+  margin-top: 7px;
+}
+
+.weather-time-slider .weather-time {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #777;
+}
