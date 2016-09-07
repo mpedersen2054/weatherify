@@ -73,7 +73,7 @@ class WeatherDay extends Component {
     return (
       <Col sm={12} md={6} lg={4} className="weather-day-container">
         <div className="weather-day">
-          <h2>{dayOfWeek}</h2>
+          <h3>{dayOfWeek}</h3>
           <div className="weather-image">
             {this.openWeatherIconToWeatherIcons(dayTime.weather[0].icon)}
           </div>
@@ -102,9 +102,7 @@ class WeatherDay extends Component {
           <div className="weather-metas">
             <span className="weather-meta humidity">
               <i className="wi wi-barometer"></i>
-              <LinkWithTooltip tooltip="Default tooltip" href="#" id="tooltip1">
                 {dayTime.main.humidity}%
-              </LinkWithTooltip>
             </span>
 
 
@@ -126,14 +124,14 @@ class WeatherDay extends Component {
 
             <span className="weather-meta rain-volume">
               <i className="wi wi-raindrops"></i>
-              {dayTime.rain['3h'] ? dayTime.rain['3h'] : 0}%
+              {dayTime.rain['3h'] ? Math.round(dayTime.rain['3h']) : 0}%
             </span>
 
             <span className="lg-vert-divider"></span>
 
             <span className="weather-meta snow-volume">
               <i className="wi wi-snowflake-cold"></i>
-              {dayTime.snow ? dayTime.snow['3h'] : 0}%
+              {dayTime.snow ? Math.round(dayTime.snow['3h']) : 0}%
             </span>
           </div>
 

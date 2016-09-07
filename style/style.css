@@ -45,12 +45,18 @@ hr {
 
 .search-area {
   position: relative;
-  margin: 60px 0;
+  margin: 40px 0 60px;
 }
 .search-area h1 {
-  font-size: 7.5vw;
-  color: #222;
-  text-shadow: 1px 1px 1px #fff;
+  font-size: 5vw;
+  color: #fff;
+  background-color: rgba(0,0,0,0.5);
+  padding: 10px 30px;
+  text-align: center;
+  border-radius: 6px;
+  letter-spacing: 1.6px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 /*
@@ -70,17 +76,52 @@ hr {
 ===== WEATHER DAY =====
  */
 
-.weather-day {
+.weather-day,
+.city-info {
   height: 440px;
   overflow: hidden;
   border: 2px solid #dce4ec;
   padding: 20px;
   border-radius: 4px;
   background-color: #fff;
-  box-shadow: 2px 2px 2px #fff;;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.4);;
 }
 
-.weather-day h2 {
+.city-info {
+  padding: 0;
+  margin-bottom: 20px;
+  overflow: scroll;
+}
+
+.city-info h2 {
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 20px 20px 10px;
+  font-size: 26px;
+}
+
+.google-map {
+  width: 100%;
+  height: 285px;
+}
+
+.city-info .meta-description {
+  padding: 10px 20px;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.city-info .meta-description .highlight {
+  color: #555;
+}
+
+.city-info .meta-description i {
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+.weather-day h3 {
   margin-top: 0px;
   font-size: 20px;
   /*color: #2c3e50;*/
@@ -98,8 +139,9 @@ hr {
 
 .weather-description {
   font-size: 16px;
-  color: #777;
+  color: #999;
   text-transform: capitalize;
+  margin-top: 20px;
 }
 
 .weather-temps {}
@@ -125,13 +167,13 @@ hr {
 }
 
 .weather-meta {
-  font-size: 12px;
+  font-size: 14px;
   position: relative;
 }
 
-.weather-meta .tooltip {
+.tooltip {
   position: absolute;
-  top: -100px;
+  bottom: 100px;
 }
 
 .weather-meta .wi {

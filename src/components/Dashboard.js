@@ -15,7 +15,8 @@ class Dashboard extends Component {
     this.state = {
       messages: {},
       isLoading: false,
-      forcastData: null
+      forcastData: null,
+      cityData: null
     }
 
     this._getWeather = this._getWeather.bind(this)
@@ -27,9 +28,14 @@ class Dashboard extends Component {
     this.setState({ isLoading: true })
     // &units=imperial to turn temps in farenheit
     axios.get(`http://api.openweathermap.org/data/2.5/forecast?q=${cityName},us&units=imperial&appid=${apiKey}`)
-      .then((response) => { if (response.status === 200) return response.data })
+      .then((response) => {
+        if (response.status === 200) {
+          this.setState({ cityData: response.data.city })
+          return response.data
+        }
+      })
       .then((responseData) => {
-        // console.log(responseData)
+        // reformats the response object
         helpers.formatForcast(responseData)
           .then((formatted) => {
             // console.log('from dashboard, after promise ||||', formatted)
@@ -50,7 +56,8 @@ class Dashboard extends Component {
 
         <WeatherWeek
           forcastData={this.state.forcastData}
-          isLoading={this.state.isLoading} />
+          isLoading={this.state.isLoading}
+          cityData={this.state.cityData} />
       </div>
     );
   }

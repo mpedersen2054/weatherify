@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import { Grid, Row } from 'react-bootstrap'
+import { Grid, Row, Col } from 'react-bootstrap'
 
 import WeatherDay from './WeatherDay'
+import CityInfo from './CityInfo'
 
 class WeatherWeek extends Component {
 
@@ -19,9 +20,14 @@ class WeatherWeek extends Component {
       return <div>LOADING...</div>
     }
 
-    if (this.props.forcastData) {
+    if (this.props.forcastData && this.props.cityData) {
       return (
         <div>
+
+          <Col sm={12} md={6} lg={4}>
+            <CityInfo info={this.props.cityData} />
+          </Col>
+
           {Object.keys(this.props.forcastData).map((key, i) => {
             var item = this.props.forcastData[key]
             return <WeatherDay day={item} key={i} />
@@ -30,6 +36,8 @@ class WeatherWeek extends Component {
       )
     }
   }
+
+  getGoogleMap() {}
 
   render() {
 
