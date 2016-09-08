@@ -5,7 +5,6 @@ import { Row, Col } from 'react-bootstrap'
 // http://maps.googleapis.com/maps/api/staticmap?center=schaumburg&zoom=14&size=512x512&maptype=roadmap&sensor=false
 
 class CityInfo extends Component {
-
   getGoogleMap() {
     var info = this.props.info
 
