@@ -4,7 +4,7 @@ import { Row, Col } from 'react-bootstrap'
 // static maps url:
 // http://maps.googleapis.com/maps/api/staticmap?center=schaumburg&zoom=14&size=512x512&maptype=roadmap&sensor=false
 
-var apiKey = 'AIzaSyDd-_Wgazzzilc5qZ6KKgTy93GIil8oMps'
+var apiKey = 'AIzaSyAo1-KK-R_C7aJPu-iEPPTdE8uE2HDkUek'
 
 class CityInfo extends Component {
 
@@ -15,7 +15,7 @@ class CityInfo extends Component {
     return (
       <div>
         <h2>{info.name}, {info.country}</h2>
-        <img className="google-map" src={`https://maps.googleapis.com/maps/api/staticmap?center=schaumburg&zoom=14&size=512x512&maptype=roadmap&sensor=false&apiKey=${apiKey}`} />
+        <img className="google-map" src={`https://maps.googleapis.com/maps/api/staticmap?center=schaumburg&zoom=14&size=512x512&maptype=roadmap&sensor=false&key=${apiKey}`} />
         <Row className="meta-description">
           <Col sm={6} md={6}>
             <i className="wi wi-barometer"></i>
