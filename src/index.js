@@ -11,8 +11,16 @@ ReactDOM.render((
   <Router history={browserHistory}>
     <Route path="/" component={App}>
       <IndexRoute component={Dashboard} />
-
-      <Route path="*" component={NotFound} />
+      <Route path="*" component={Dashboard} />
     </Route>
   </Router>
 ), document.getElementById('root'));
+
+// ReactDOM.render((
+//   <Router history={browserHistory}>
+//     <Route path="/" component={App}>
+      // <IndexRoute component={Dashboard} />
+//       <Route path="*" component={Dashboard} />
+//     </Route>
+//   </Router>
+// ), document.getElementById('root'));

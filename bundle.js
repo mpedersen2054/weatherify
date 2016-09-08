@@ -84,9 +84,18 @@
 	    _reactRouter.Route,
 	    { path: '/', component: _App2.default },
 	    _react2.default.createElement(_reactRouter.IndexRoute, { component: _Dashboard2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: '*', component: _NotFound2.default })
+	    _react2.default.createElement(_reactRouter.Route, { path: '*', component: _Dashboard2.default })
 	  )
 	), document.getElementById('root'));
+
+	// ReactDOM.render((
+	//   <Router history={browserHistory}>
+	//     <Route path="/" component={App}>
+	// <IndexRoute component={Dashboard} />
+	//       <Route path="*" component={Dashboard} />
+	//     </Route>
+	//   </Router>
+	// ), document.getElementById('root'));
 
 /***/ },
 /* 2 */
