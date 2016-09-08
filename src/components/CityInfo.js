@@ -13,7 +13,7 @@ class CityInfo extends Component {
     return (
       <div>
         <h2>{info.name}, {info.country}</h2>
-        <img className="google-map" src={`http://maps.googleapis.com/maps/api/staticmap?center=schaumburg&zoom=14&size=512x512&maptype=roadmap&sensor=false`} />
+        <img className="google-map" src={`//maps.googleapis.com/maps/api/staticmap?center=schaumburg&zoom=14&size=512x512&maptype=roadmap&sensor=false`} />
         <Row className="meta-description">
           <Col sm={6} md={6}>
             <i className="wi wi-barometer"></i>
