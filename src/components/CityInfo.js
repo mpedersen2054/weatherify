@@ -6,6 +6,7 @@ import { Row, Col } from 'react-bootstrap'
 
 class CityInfo extends Component {
 
+
   getGoogleMap() {
     var info = this.props.info
 
