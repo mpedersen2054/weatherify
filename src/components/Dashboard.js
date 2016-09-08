@@ -4,7 +4,7 @@ import axios from 'axios'
 import SearchArea from './SearchArea'
 import WeatherWeek from './WeatherWeek'
 
-import fakedata from '../fakedata.json'
+// import fakedata from '../fakedata.json'
 import * as helpers from '../lib/helpers'
 
 class Dashboard extends Component {
@@ -27,7 +27,9 @@ class Dashboard extends Component {
 
     this.setState({ isLoading: true })
     // &units=imperial to turn temps in farenheit
-    axios.get(`//api.openweathermap.org/data/2.5/forecast?q=${cityName},us&units=imperial&appid=${apiKey}`)
+    // axios.get(`//api.openweathermap.org/data/2.5/forecast?q=${cityName},us&units=imperial&appid=${apiKey}`)
+    // axios.get(`//api.openweathermap.org/data/2.5/forecast?q=${cityName},us&units=imperial&appid=${apiKey}`)
+    axios.get(__dirname + '/fakedata.json')
       .then((response) => {
         if (response.status === 200) {
           this.setState({ cityData: response.data.city })
