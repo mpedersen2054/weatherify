@@ -28368,7 +28368,6 @@
 	      this.setState({ isLoading: true });
 	      // &units=imperial to turn temps in farenheit
 	      // axios.get(`//api.openweathermap.org/data/2.5/forecast?q=${cityName},us&units=imperial&appid=${apiKey}`)
-	      // axios.get(`//api.openweathermap.org/data/2.5/forecast?q=${cityName},us&units=imperial&appid=${apiKey}`)
 	      _axios2.default.get('./fakedata.json').then(function (response) {
 	        if (response.status === 200) {
 	          _this2.setState({ cityData: response.data.city });
@@ -28377,7 +28376,6 @@
 	      }).then(function (responseData) {
 	        // reformats the response object
 	        helpers.formatForcast(responseData).then(function (formatted) {
-	          // console.log('from dashboard, after promise ||||', formatted)
 	          _this2.setState({ forcastData: formatted, isLoading: false });
 	        });
 	      }).catch(function (error) {
@@ -67235,7 +67233,7 @@
 	          ', ',
 	          info.country
 	        ),
-	        _react2.default.createElement('img', { className: 'google-map', src: 'https://maps.googleapis.com/maps/api/staticmap?center=schaumburg&zoom=14&size=512x512&maptype=roadmap&sensor=false&key=' + apiKey }),
+	        _react2.default.createElement('img', { className: 'google-map', src: 'https://maps.googleapis.com/maps/api/staticmap?center=' + info.name + '&zoom=14&size=512x512&maptype=roadmap&sensor=false&key=' + apiKey }),
 	        _react2.default.createElement(
 	          _reactBootstrap.Row,
 	          { className: 'meta-description' },

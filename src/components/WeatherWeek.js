@@ -23,7 +23,6 @@ class WeatherWeek extends Component {
     if (this.props.forcastData && this.props.cityData) {
       return (
         <div>
-
           <Col sm={12} md={6} lg={4}>
             <CityInfo info={this.props.cityData} />
           </Col>
