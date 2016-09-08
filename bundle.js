@@ -67233,7 +67233,7 @@
 	          ', ',
 	          info.country
 	        ),
-	        _react2.default.createElement('img', { className: 'google-map', src: '//maps.googleapis.com/maps/api/staticmap?center=schaumburg&zoom=14&size=512x512&maptype=roadmap&sensor=false' }),
+	        _react2.default.createElement('img', { className: 'google-map', src: 'https://maps.googleapis.com/maps/api/staticmap?center=schaumburg&zoom=14&size=512x512&maptype=roadmap&sensor=false' }),
 	        _react2.default.createElement(
 	          _reactBootstrap.Row,
 	          { className: 'meta-description' },
