@@ -50,6 +50,7 @@ hr {
 .search-area h1 {
   font-size: 5vw;
   color: #fff;
+  color: yellow;
   background-color: rgba(0,0,0,0.5);
   padding: 10px 30px;
   text-align: center;
