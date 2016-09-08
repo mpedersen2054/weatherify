@@ -67209,6 +67209,8 @@
 	// static maps url:
 	// http://maps.googleapis.com/maps/api/staticmap?center=schaumburg&zoom=14&size=512x512&maptype=roadmap&sensor=false
 
+	var apiKey = 'AIzaSyDd-_Wgazzzilc5qZ6KKgTy93GIil8oMps';
+
 	var CityInfo = function (_Component) {
 	  _inherits(CityInfo, _Component);
 
@@ -67233,7 +67235,7 @@
 	          ', ',
 	          info.country
 	        ),
-	        _react2.default.createElement('img', { className: 'google-map', src: 'https://maps.googleapis.com/maps/api/staticmap?center=schaumburg&zoom=14&size=512x512&maptype=roadmap&sensor=false' }),
+	        _react2.default.createElement('img', { className: 'google-map', src: 'https://maps.googleapis.com/maps/api/staticmap?center=schaumburg&zoom=14&size=512x512&maptype=roadmap&sensor=false&apiKey=' + apiKey }),
 	        _react2.default.createElement(
 	          _reactBootstrap.Row,
 	          { className: 'meta-description' },
