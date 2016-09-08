@@ -29,7 +29,7 @@ class Dashboard extends Component {
     // &units=imperial to turn temps in farenheit
     // axios.get(`//api.openweathermap.org/data/2.5/forecast?q=${cityName},us&units=imperial&appid=${apiKey}`)
     // axios.get(`//api.openweathermap.org/data/2.5/forecast?q=${cityName},us&units=imperial&appid=${apiKey}`)
-    axios.get(__dirname + '/fakedata.json')
+    axios.get('./fakedata.json')
       .then((response) => {
         if (response.status === 200) {
           this.setState({ cityData: response.data.city })

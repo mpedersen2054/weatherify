@@ -28298,7 +28298,7 @@
 /* 255 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(__dirname) {'use strict';
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -28369,7 +28369,7 @@
 	      // &units=imperial to turn temps in farenheit
 	      // axios.get(`//api.openweathermap.org/data/2.5/forecast?q=${cityName},us&units=imperial&appid=${apiKey}`)
 	      // axios.get(`//api.openweathermap.org/data/2.5/forecast?q=${cityName},us&units=imperial&appid=${apiKey}`)
-	      _axios2.default.get(__dirname + '/fakedata.json').then(function (response) {
+	      _axios2.default.get('./fakedata.json').then(function (response) {
 	        if (response.status === 200) {
 	          _this2.setState({ cityData: response.data.city });
 	          return response.data;
@@ -28405,7 +28405,6 @@
 	}(_react.Component);
 
 	exports.default = Dashboard;
-	/* WEBPACK VAR INJECTION */}.call(exports, "/"))
 
 /***/ },
 /* 256 */
