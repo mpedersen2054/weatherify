@@ -3,6 +3,7 @@ import axios from 'axios'
 
 import SearchArea from './SearchArea'
 import WeatherWeek from './WeatherWeek'
+import Messages from './Messages'
 
 // import fakedata from '../fakedata.json'
 import * as helpers from '../lib/helpers'
@@ -13,7 +14,9 @@ class Dashboard extends Component {
     super()
 
     this.state = {
-      messages: {},
+      messages: [
+        { type: 'success', msg: 'Due to XSRF error on published app, this app uses static data from a JSON file.' }
+      ],
       isLoading: false,
       forcastData: null,
       cityData: null
@@ -53,6 +56,8 @@ class Dashboard extends Component {
       <div className="">
         <SearchArea
           _getWeather={this._getWeather} />
+
+        <Messages messages={this.state.messages} />
 
         <WeatherWeek
           forcastData={this.state.forcastData}

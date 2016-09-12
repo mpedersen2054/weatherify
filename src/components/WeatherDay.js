@@ -64,16 +64,34 @@ class WeatherDay extends Component {
     return <i className={`wi ${iconMap[iconCode]}`}></i>
   }
 
+  getCalenderDate(dt_txt) {
+    if (!dt_txt) return 'no date.'
+    var dtMonth = new Date(dt_txt).getMonth()
+    var dtDay = new Date(dt_txt).getDate()
+
+    return `${dtMonth}/${dtDay}`
+  }
+
   render() {
-    var time      = this.state.time
-    var dayTime   = this.props.day[time]
-    var dayOfWeek = this.getDayOfWeekText(this.props.day[0].dt_txt)
-    var timeText  = this.getTimeText(time)
+    var time         = this.state.time
+    var dayTime      = this.props.day[time]
+    var dayOfWeek    = this.getDayOfWeekText(this.props.day[0].dt_txt)
+    var timeText     = this.getTimeText(time)
+    var calenderDate = this.getCalenderDate(dayTime.dt_txt)
+
+    console.log(calenderDate)
 
     return (
       <Col sm={12} md={6} lg={4} className="weather-day-container">
         <div className="weather-day">
-          <h3>{dayOfWeek}</h3>
+          <h3>
+            <div className="pull-left day-of-week">
+              {dayOfWeek}
+            </div>
+            <div className="pull-right calender-date">
+              {calenderDate}
+            </div>
+          </h3>
           <div className="weather-image">
             {this.openWeatherIconToWeatherIcons(dayTime.weather[0].icon)}
           </div>

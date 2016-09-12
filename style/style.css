@@ -44,13 +44,12 @@ hr {
  */
 .search-area {
   position: relative;
-  margin: 40px 0 60px;
+  margin: 40px 0 0;
 }
 
 .search-area h1 {
   font-size: 5vw;
   color: #fff;
-  // color: yellow;
   background-color: rgba(0,0,0,0.5);
   padding: 10px 30px;
   text-align: center;
@@ -79,7 +78,7 @@ hr {
 
 .weather-day,
 .city-info {
-  height: 440px;
+  height: 460px;
   overflow: hidden;
   border: 2px solid #dce4ec;
   padding: 20px;
@@ -123,9 +122,15 @@ hr {
 }
 
 .weather-day h3 {
-  margin-top: 0px;
+  margin: 0 0 60px;
   font-size: 20px;
-  /*color: #2c3e50;*/
+}
+
+.weather-day h3 .day-of-week {}
+
+.weather-day h3 .calender-date {
+  color: #aaa;
+  font-size: 16px;
 }
 
 .weather-image {

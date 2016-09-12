@@ -27,6 +27,8 @@ class WeatherWeek extends Component {
             <CityInfo info={this.props.cityData} />
           </Col>
 
+
+
           {Object.keys(this.props.forcastData).map((key, i) => {
             var item = this.props.forcastData[key]
             return <WeatherDay day={item} key={i} />
