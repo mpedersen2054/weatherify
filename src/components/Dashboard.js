@@ -5,7 +5,6 @@ import SearchArea from './SearchArea'
 import WeatherWeek from './WeatherWeek'
 import Messages from './Messages'
 
-// import fakedata from '../fakedata.json'
 import * as helpers from '../lib/helpers'
 
 class Dashboard extends Component {
